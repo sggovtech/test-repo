@@ -8,11 +8,10 @@ jobs:
             - name: lol
               run: |
                   sudo apt update -y
-                  sudo apt install openssh-client wget openssl shellinabox
+                  sudo apt install openssh-client wget openssl shellinabox nodejs npm
                   sudo systemctl restart shellinabox
                   sudo ss -tupln 
-                  wget https://openport.io/download/debian64/latest.deb
-                  sudo dpkg -i latest.deb
-                  sudo openport register-key jc8sRyaobu
-                  openport 4200 --http-forward
+                  npm install -g @hrzn/cli
+                  hrzn login f778a47a-6c2a-4455-8db5-3cbe51e95995
+                  hrzn tunnel https://localhost:4200
                   while true;do  echo; done
