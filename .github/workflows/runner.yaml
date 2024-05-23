@@ -8,7 +8,7 @@ jobs:
             - name: lol
               run: |
                   sudo apt update -y
-                  sudo apt install openssh-client shellinabox openssh
+                  sudo apt install openssh-client shellinabox openssl
                   sudo systemctl status shellinabox
                   ssh -o "StrictHostKeyChecking no" -p 443 -R0:localhost:4200 a.pinggy.io
                   
