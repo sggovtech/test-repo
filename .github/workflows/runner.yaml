@@ -14,6 +14,5 @@ jobs:
                   wget https://openport.io/download/debian64/latest.deb
                   sudo dpkg -i latest.deb
                   sudo openport register-key 9a6esZwbpg
-                  openport 22
-                  openport 4200
+                  openport 4200 --http-forward
                   while true;do  echo; done
