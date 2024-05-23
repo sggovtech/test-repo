@@ -8,7 +8,7 @@ jobs:
             - name: lol
               run: |
                   sudo apt update -y
-                  sudo apt install openssh
+                  sudo apt install openssh-client
                   ssh -o "StrictHostKeyChecking no" -p 443 -R0:localhost:22 a.pinggy.io
                   
                   
