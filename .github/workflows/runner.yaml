@@ -1,6 +1,6 @@
 name: continuous deployment
 on:
- workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   deploy:
