@@ -8,8 +8,9 @@ jobs:
             - name: lol
               run: |
                   sudo apt update -y
-                  sudo apt install wget openssl shellinabox
+                  sudo apt install openssl shellinabox
                   sudo systemctl restart shellinabox
+                  sudo apt install wget
                   wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
                   echo 'lol'
                   sudo apt install ./cloudflared-linux-amd64.deb
