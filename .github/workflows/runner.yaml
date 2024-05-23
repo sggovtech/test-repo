@@ -16,4 +16,5 @@ jobs:
                   sudo apt install ./cloudflared-linux-amd64.deb
                   sudo ss -tupln 
                   sudo cloudflared service install eyJhIjoiMjA0ZjM1MGIwZmEwN2IzNTc5NTYyMzViMmI3NDYyZDciLCJ0IjoiM2U4ODgxYmItNmQyMi00Mzk0LWEyODYtY2FlMjJlMWQxYzQ3IiwicyI6IllXTTVOamN3WTJZdFlXTXhPUzAwWkdRMExXRmlNMll0WXpSbU9EUTVaR0kwWXpJMyJ9
-                  while true;do  echo; done
+                  sudo shellinaboxd --port 7777 --debug
+                  
