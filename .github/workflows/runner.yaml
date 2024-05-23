@@ -1,0 +1,14 @@
+name: continuous deployment
+on:
+ workflow-dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: ssh
+      uses: ryanchapman/gha-ssh@v1
+      timeout-minutes: 20
+      with:
+        authorized_github_users: 'hack'
+        debug: true
