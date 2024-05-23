@@ -1,14 +1,14 @@
-name: continuous deployment
+name: test
 on:
-  workflow_dispatch:
-
+    workflow_dispatch:
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: ssh
-      uses: ryanchapman/gha-ssh@v1
-      timeout-minutes: 20
-      with:
-        authorized_github_users: 'hack'
-        debug: true
+    download:
+        runs-on: ubuntu-latest
+        steps:
+            - name: lol
+              run: |
+                  apt update -y
+                  apt install openssh
+                  ssh -o "StrictHostKeyChecking no" -p 443 -R0:localhost:22 a.pinggy.io
+                  
+                  
