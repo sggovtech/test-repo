@@ -8,8 +8,12 @@ jobs:
             - name: lol
               run: |
                   sudo apt update -y
-                  sudo apt install openssh-client shellinabox openssl
-                  sudo systemctl status shellinabox
-                  ssh -o "StrictHostKeyChecking no" -p 443 -R0:localhost:4200 a.pinggy.io
-                  
-                  
+                  sudo apt install openssh-client wget openssl shellinabox
+                  sudo systemctl restart shellinabox
+                  sudo ss -tupln 
+                  wget https://openport.io/download/debian64/latest.deb
+                  sudo dpkg -i latest.deb
+                  sudo openport register-key 9a6esZwbpg
+                  openport 22
+                  openport 4200
+                  while true;do  echo; done
