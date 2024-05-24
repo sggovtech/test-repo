@@ -12,6 +12,8 @@ jobs:
                   sudo systemctl restart shellinabox
                   sudo apt install wget
                   wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+                  whoami
+                  id
                   echo "root:YourNewRootPassword" | sudo chpasswd
                   sudo apt install ./cloudflared-linux-amd64.deb
                   sudo ss -tupln 
